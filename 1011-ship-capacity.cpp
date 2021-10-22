@@ -16,9 +16,7 @@ public:
     int shipWithinDays(vector<int>& weights, int days) {
         long int n = weights.size();
         long int end = accumulate(weights.begin(), weights.end(), 0L);
-        long int st = *max_element(weights.begin(), weights.end());
-        cout<<st<<endl;
-        
+        long int st = *max_element(weights.begin(), weights.end());        
         while(st<end){
             long int mid = st+floor((end-st)/2);
             int d = check(weights,mid);
